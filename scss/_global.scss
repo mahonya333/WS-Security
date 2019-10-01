@@ -1,0 +1,53 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body,
+html{
+    height: 100%;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+ul,
+li{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-family: 'Calibri', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.title{
+    font-size: 26px;
+    line-height: 39px;
+    word-spacing: 15px;
+    letter-spacing: 5px;
+}

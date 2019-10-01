@@ -1,0 +1,24 @@
+@media (max-width: 1280px){
+    .advantages{
+        .advantages__inner{
+            right: 100px;
+        }
+    }
+}
+@media (max-width: 1100px){
+    .advantages{
+        .advantages__inner{
+            right: 30px;
+        }
+    }
+}
+@media (max-width: 700px){
+    .advantages{
+        .advantages__inner{
+            max-width: 400px;
+            right: 0px;
+            left: 0;
+            margin: 0 auto;
+        }
+    }
+}
