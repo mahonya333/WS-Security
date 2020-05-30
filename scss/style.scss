@@ -49,6 +49,7 @@
     min-height: 3rem;
   }
   &__list {
+    list-style: none;
     display: flex;
     justify-content: flex-end;
     min-height: inherit;
@@ -390,6 +391,9 @@
       flex-basis: 100%;
     }
   }
+  &__contacts-list{
+    list-style: none;
+  }
   &__contacts-item{
     display: block;
     margin-bottom: 3rem;
@@ -441,6 +445,7 @@
     flex-basis: 100%;
   }
   &__list {
+    list-style: none;
     margin-left: 1.3rem;
   }
   &__item {
@@ -463,6 +468,7 @@
     flex-basis: 100%;
   }
   &__list {
+    list-style: none;
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
