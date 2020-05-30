@@ -2,61 +2,58 @@
 @import "mixins";
 @import "global";
 @import "fonts";
-@import "media";
-// header start
 
+// header start
 .header {
-  background-attachment: fixed;
-  min-height: 93rem;
-  position: relative;
-  @include breakpoint($mobile-width) {
-    min-height: 70rem;
-  }
-}
-.header-top {
   background-color: $color-dark-bg;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 9rem;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
   @include breakpoint($mobile-width) {
     min-height: 5rem;
     flex-wrap: wrap;
   }
-  &__logo {
-    min-width: 27.7rem;
-    padding-left: 10rem;
+}
+.header-logo {
+  padding-left: 10rem;
+  @include breakpoint($tablet-width) {
+    min-width: auto;
+    padding-left: 4rem;
+  }
+  @include breakpoint($mobile-width) {
+    padding-left: 0;
+    margin: 1rem auto;
+  }
+  &__link {
+    min-width: 18.7rem;
+    display: inline-block;
     @include breakpoint($tablet-width) {
       min-width: auto;
-      padding-left: 4rem;
     }
+  }
+  &__img {
     @include breakpoint($mobile-width) {
-      padding-left: 0;
-      margin: 1rem auto;
-    }
-    &-img {
-      @include breakpoint($mobile-width) {
-        height: 3rem;
-        line-height: 1;
-      }
-    }
-    &-link {
-      display: inline-block;
+      height: 3rem;
+      line-height: 1;
     }
   }
 }
-.header-top__navigation {
+.header-navigation {
   min-height: inherit;
   width: 100%;
   @include breakpoint($mobile-width-small) {
     min-height: 3rem;
   }
-  &-list {
+  &__list {
     display: flex;
     justify-content: flex-end;
     min-height: inherit;
   }
-  &-item {
+  &__item {
     display: block;
     max-width: 15rem;
     width: 100%;
@@ -64,7 +61,7 @@
       max-width: 100%;
     }
   }
-  &-link {
+  &__link {
     font-family: $Dosis-regular;
     display: flex;
     align-items: center;
@@ -79,11 +76,20 @@
     }
   }
 }
-.header-content {
-  padding-top: 18.7rem;
+// header end
+/* security start */
+.security {
+  background-attachment: fixed;
+  min-height: 93rem;
+  position: relative;
+  padding-top: 25.5rem;
+  padding-bottom: 15.1rem;
   @include breakpoint($mobile-width) {
-    padding-top: 12.7rem;
+    min-height: 70rem;
+    padding-top: 19.5rem;
   }
+}
+.security-content {
   &__title {
     margin: 0;
     font-family: $Dosis-regular;
@@ -95,15 +101,18 @@
       font-size: 1.8rem;
       line-height: 2.7rem;
     }
-    &--subtitle {
-      font-family: $Calibri-regular;
-      color: $color-dark-white;
-      font-size: 3.4rem;
-      font-weight: 700;
-      @include breakpoint($mobile-width) {
-        font-size: 2.7rem;
-      }
+  }
+  &__subtitle {
+    font-family: $Calibri-regular;
+    color: $color-dark-white;
+    font-size: 3.4rem;
+    font-weight: 700;
+    @include breakpoint($mobile-width) {
+      font-size: 2.7rem;
     }
+  }
+  &__btn-trade-wrapper {
+    padding-bottom: 2.7rem;
   }
   &__btn-trade {
     background-color: $color-green;
@@ -113,27 +122,24 @@
     &:hover {
       background-color: $color-dark-green;
     }
-    &-wrapper {
-      padding-bottom: 2.7rem;
-    }
   }
   &__garant {
     margin: 0;
     line-height: 2.4rem;
     color: $color-dark-white;
     max-width: 25rem;
-    &-link {
-      color: $color-green;
-      transition: all 0.3s ease-in-out;
-      text-decoration: none;
-      &:hover {
-        color: $color-dark-green;
-        text-decoration: underline;
-      }
+  }
+  &__garant-link {
+    color: $color-green;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    &:hover {
+      color: $color-dark-green;
+      text-decoration: underline;
     }
   }
 }
-.header-bottom {
+.security-bottom {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -155,7 +161,7 @@
     }
   }
 }
-// header end
+/* security end */
 // scheme start
 .scheme {
   background-color: $color-gray-bg;
@@ -182,17 +188,15 @@
     flex-basis: 100%;
     margin-bottom: 4rem;
   }
-  &__img {
-    &-wrapper {
-      width: 14.9rem;
-      height: 14.9rem;
-      background-color: $color-white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
+  &__img-wrapper {
+    width: 14.9rem;
+    height: 14.9rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
   &__content {
     text-align: center;
@@ -202,35 +206,35 @@
     @include breakpoint($mobile-width) {
       max-width: 100%;
     }
-    &-number {
-      font-size: 3rem;
-      line-height: 4rem;
-      color: $color-gray-light;
-      display: block;
-      position: relative;
+  }
+  &__content-number {
+    font-size: 3rem;
+    line-height: 4rem;
+    color: $color-gray-light;
+    display: block;
+    position: relative;
+  }
+  &__content-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 74%;
+    max-width: 24.3rem;
+    @include breakpoint($laptop-width) {
+      display: none;
     }
-    &-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 74%;
-      max-width: 24.3rem;
-      @include breakpoint($tablet-width) {
-        display: none;
-      }
-    }
-    &-text {
-      margin: 0;
-      color: $color-dark-gray;
-    }
-    &-link {
-      color: $color-green;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        color: $color-dark-green;
-        text-decoration: underline;
-      }
+  }
+  &__content-text {
+    margin: 0;
+    color: $color-dark-gray;
+  }
+  &__content-link {
+    color: $color-green;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $color-dark-green;
+      text-decoration: underline;
     }
   }
 }
@@ -239,8 +243,11 @@
 .advantages {
   padding-top: 17rem;
   padding-bottom: 5rem;
-  &__inner {
+  &__items {
     color: $color-dark-gray-font;
+    max-width: 41rem;
+    margin-left: auto;
+    margin-right: 2rem;
   }
   &__title {
     margin: 0;
@@ -248,11 +255,6 @@
     font-size: 3.4rem;
     font-weight: normal;
     margin-bottom: 2.7rem;
-  }
-  &__items {
-    max-width: 41rem;
-    margin-left: auto;
-    margin-right: 2rem;
   }
 }
 .advantages-item {
@@ -274,17 +276,15 @@
     font-size: 1.4rem;
     line-height: 1.7rem;
   }
-  &__img {
-    &-wrapper {
-      width: 10.7rem;
-      height: 10.7rem;
-      background-color: $color-white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
+  &__img-wrapper{
+    width: 10.7rem;
+    height: 10.7rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
 }
 // advantages end
@@ -303,14 +303,14 @@
   &__inner {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 10rem;
+    margin-bottom: 10rem;
     @include breakpoint($tablet-width) {
       flex-wrap: wrap;
-      padding-bottom: 8rem;
+      margin-bottom: 8rem;
     }
     @include breakpoint($mobile-width) {
       flex-wrap: wrap;
-      padding-bottom: 4rem;
+      margin-bottom: 4rem;
     }
   }
   &__title {
@@ -336,17 +336,15 @@
   @include breakpoint($mobile-width) {
     flex-basis: 100%;
   }
-  &__img {
-    &-wrapper {
-      height: 8rem;
-      width: 100%;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include breakpoint($tablet-width) {
-        margin-bottom: 0.5rem;
-      }
+  &__img-wrapper {
+    height: 8rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($tablet-width) {
+      margin-bottom: 0.5rem;
     }
   }
   &__info {
@@ -366,6 +364,7 @@
   padding: 6.7rem 0;
   @include breakpoint($mobile-width) {
     padding-top: 3.7rem;
+    padding-bottom: 3rem;
   }
   &__inner {
     display: flex;
@@ -386,17 +385,16 @@
       margin-bottom: 3rem;
     }
   }
-}
-
-.footer__contacts {
-  @include breakpoint($mobile-width) {
-    flex-basis: 100%;
+  &__contacts{
+    @include breakpoint($mobile-width) {
+      flex-basis: 100%;
+    }
   }
-  &-item {
+  &__contacts-item{
     display: block;
     margin-bottom: 3rem;
   }
-  &-link {
+  &__contacts-link{
     display: inline-block;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -416,39 +414,40 @@
       font-family: "icomoon" !important;
     }
   }
-  .footer__contacts-email::before {
-    content: "\f0e0";
-  }
-  .footer__contacts-phone::before {
-    content: "\f098";
-    font-size: 2.2rem;
-  }
-  .footer__contacts-skype::before {
-    content: "\f17e";
-    font-size: 2.5rem;
-  }
-  .footer__contacts-telegram::before {
-    content: "\f2c6";
-    font-size: 2.2rem;
-  }
-  .footer__contacts-map::before {
-    content: "\f041";
-    left: 1px;
-    font-size: 3rem;
-  }
 }
-.footer__articles {
+.footer__contacts-email::before {
+  content: "\f0e0";
+}
+.footer__contacts-phone::before {
+  content: "\f098";
+  font-size: 2.2rem;
+}
+.footer__contacts-skype::before {
+  content: "\f17e";
+  font-size: 2.5rem;
+}
+.footer__contacts-telegram::before {
+  content: "\f2c6";
+  font-size: 2.2rem;
+}
+.footer__contacts-map::before {
+  content: "\f041";
+  left: 1px;
+  font-size: 3rem;
+}
+
+.footer-articles {
   @include breakpoint($mobile-width) {
     flex-basis: 100%;
   }
-  &-list {
+  &__list {
     margin-left: 1.3rem;
   }
-  &-item {
+  &__item {
     display: block;
     margin-bottom: 1.5rem;
   }
-  &-link {
+  &__link {
     font-size: 2rem;
     color: $color-dark-gray;
     text-decoration: none;
@@ -466,22 +465,21 @@
   &__list {
     display: flex;
     align-items: center;
-    &-item {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-    &-link {
-      display: inline-block;
-      font-size: 0;
-    }
-    &-img {
-    }
+    margin-bottom: 2rem;
   }
-  .footer-logo {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  &__list-item{
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
+  &__list-link{
+    display: inline-block;
+    font-size: 0;
+  }
+}
+.footer-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 @import "media";

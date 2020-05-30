@@ -16,68 +16,68 @@
 <body>
     <div class="wrapper">
         <div class="content">
-            <header class="header bg-cover" style="background-image: url(images/header-bg.jpg);">
-                <div class="header-top">
-                    <div class="header-top__logo">
-                        <a class="header-top__logo-link" href="#">
-                            <img class="header-top__logo-img" src="images/logo.png" alt="logo image">
-                        </a>
-                    </div>
-                    <nav class="header-top__navigation">
-                        <ul class="header-top__navigation-list">
-                            <li class="header-top__navigation-item">
-                                <a class="header-top__navigation-link" href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="header-top__navigation-item">
-                                <a class="header-top__navigation-link" href="#">
-                                    About us
-                                </a>
-                            </li>
-                            <li class="header-top__navigation-item">
-                                <a class="header-top__navigation-link" href="#">
-                                    Data Base
-                                </a>
-                            </li>
-                            <li class="header-top__navigation-item">
-                                <a class="header-top__navigation-link" href="#">
-                                    Login
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+            <header class="header">
+                <div class="header-logo">
+                    <a class="header-logo__link" href="#">
+                        <img class="header-logo__img" src="images/logo.png" alt="logo image">
+                    </a>
                 </div>
-                <div class="header-content">
+                <nav class="header-navigation">
+                    <ul class="header-navigation__list">
+                        <li class="header-navigation__item">
+                            <a class="header-navigation__link" href="#security">
+                                Home
+                            </a>
+                        </li>
+                        <li class="header-navigation__item">
+                            <a class="header-navigation__link" href="#advantages">
+                                About us
+                            </a>
+                        </li>
+                        <li class="header-navigation__item">
+                            <a class="header-navigation__link" href="#statistics">
+                                Data Base
+                            </a>
+                        </li>
+                        <li class="header-navigation__item">
+                            <a class="header-navigation__link" href="#">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="security bg-cover" id="security" style="background-image: url(images/security-bg.jpg);">
+                <div class="security-content">
                     <div class="container">
-                        <h1 class="header-content__title">
+                        <h1 class="security-content__title">
                             Service of safe internet trades <br>
-                            <span class="header-content__title--subtitle">Make yourself secure from rouges</span>
+                            <span class="security-content__subtitle">Make yourself secure from rouges</span>
                         </h1>
-                        <div class="header-content__btn-trade-wrapper">
-                            <button class=" btn header-content__btn-trade">Srart a safe tradeу</button>
+                        <div class="security-content__btn-trade-wrapper">
+                            <button class="btn security-content__btn-trade">Start a safe tradeу</button>
                         </div>
-                        <p class="header-content__garant">
+                        <p class="security-content__garant">
                             WS Security guarantees 100% safety with
-                            <a class="header-content__garant-link" href="#">
+                            <a class="security-content__garant-link" href="#">
                                 Safe Trade
                             </a>
 
                         </p>
                     </div>
                 </div>
-                <div class="header-bottom">
-                    <h2 class="header-bottom__title">
+                <div class="security-bottom">
+                    <h2 class="security-bottom__title">
                         Simple and clear scheme of trading
                     </h2>
                 </div>
-            </header>
+            </main>
             <section class="scheme">
                 <div class="container">
                     <div class="scheme__inner">
                         <div class="scheme-item">
                             <div class="scheme-item__img-wrapper">
-                                <img clas="scheme__img" src="images/paper.png" alt="paper image">
+                                <img class="scheme-item__img" src="images/paper.png" alt="paper image">
                             </div>
                             <div class="scheme-item__content">
                                 <span class="scheme-item__content-number">
@@ -97,7 +97,7 @@
                         </div>
                         <div class="scheme-item">
                             <div class="scheme-item__img-wrapper">
-                                <img clas="scheme__img" src="images/hand.png" alt="hand image">
+                                <img class="scheme-item__img" src="images/hand.png" alt="hand image">
                             </div>
 
                             <div class="scheme-item__content">
@@ -118,7 +118,7 @@
                         </div>
                         <div class="scheme-item">
                             <div class="scheme-item__img-wrapper">
-                                <img clas="scheme__img" src="images/shield.png" alt="shield image">
+                                <img class="scheme-item__img" src="images/shield.png" alt="shield image">
                             </div>
                             <div class="scheme-item__content">
                                 <span class="scheme-item__content-number">
@@ -138,7 +138,7 @@
                         </div>
                         <div class="scheme-item">
                             <div class="scheme-item__img-wrapper">
-                                <img clas="scheme__img" src="images/libra.png" alt="libra image">
+                                <img class="scheme-item__img" src="images/libra.png" alt="libra image">
                             </div>
                             <div class="scheme-item__content">
                                 <span class="scheme-item__content-number">4</span>
@@ -156,7 +156,8 @@
                 </div>
             </section>
 
-            <section class="advantages bg-cover" style="background-image: url(images/advantages-bg.jpg);">
+            <section class="advantages bg-cover" id="advantages"
+                style="background-image: url(images/advantages-bg.jpg);">
                 <div class="container">
                     <div class="advantages__inner">
                         <div class="advantages__items">
@@ -209,7 +210,8 @@
                     </div>
                 </div>
             </section>
-            <section class="statistics bg-cover" style="background-image: url(images/statistics-bg.jpg);">
+            <section class="statistics bg-cover" id="statistics"
+                style="background-image: url(images/statistics-bg.jpg);">
                 <div class="container">
                     <div class="statistics__inner">
                         <div class="statistics-item">
@@ -219,8 +221,8 @@
                             <div class="statistics-item__info">
                                 Clients
                             </div>
-                            <div class="statistics-item__result">
-                                19 296
+                            <div class="statistics-item__result js-counter">
+                                19296
                             </div>
                         </div>
                         <div class="statistics-item">
@@ -230,7 +232,7 @@
                             <div class="statistics-item__info">
                                 Trades for this monht
                             </div>
-                            <div class="statistics-item__result">
+                            <div class="statistics-item__result js-counter">
                                 642
                             </div>
                         </div>
@@ -241,8 +243,8 @@
                             <div class="statistics-item__info">
                                 Trades for last 3 months
                             </div>
-                            <div class="statistics-item__result">
-                                2 821
+                            <div class="statistics-item__result js-counter">
+                                2821
                             </div>
                         </div>
                         <div class="statistics-item">
@@ -252,8 +254,8 @@
                             <div class="statistics-item__info">
                                 General amount of trades
                             </div>
-                            <div class="statistics-item__result">
-                                88 219
+                            <div class="statistics-item__result js-counter">
+                                88219
                             </div>
                         </div>
                     </div>
@@ -272,7 +274,8 @@
                         </h3>
                         <ul class="footer__contacts-list">
                             <li class="footer__contacts-item">
-                                <a class="footer__contacts-link footer__contacts-email" href="#">
+                                <a class="footer__contacts-link footer__contacts-email"
+                                    href="mailto:wssecurity@gmail.com">
                                     wssecurity@gmail.com
                                 </a>
                             </li>
@@ -282,60 +285,64 @@
                                 </a>
                             </li>
                             <li class="footer__contacts-item">
-                                <a class="footer__contacts-link footer__contacts-skype" href="#">
+                                <a class="footer__contacts-link footer__contacts-skype"
+                                    href="skype:live:01afc6001fcdd11">
                                     live:01afc6001fcdd1
                                 </a>
                             </li>
                             <li class="footer__contacts-item">
-                                <a class="footer__contacts-link footer__contacts-telegram " href="tel:0930010101">
+                                <a class="footer__contacts-link footer__contacts-telegram "
+                                    href="https://t.me/nickname">
                                     093 001 01 01
                                 </a>
                             </li>
                             <li class="footer__contacts-item">
-                                <a class="footer__contacts-link footer__contacts-map" href="#">
-                                    03134 Kyiv city. <br>
-                                    Sofiivska Borschahivka. 48
-                                </a>
+                                <address>
+                                    <a class="footer__contacts-link footer__contacts-map" href="#">
+                                        03134 Kyiv city. <br>
+                                        Sofiivska Borschahivka. 48
+                                    </a>
+                                </address>
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__articles">
+                    <div class="footer-articles">
                         <h3 class="footer__title title">
                             Useful pages
                         </h3>
-                        <ul class="footer__articles-list">
-                            <li class="footer__articles-item">
-                                <a class="footer__articles-link" href="#">
+                        <ul class="footer-articles__list">
+                            <li class="footer-articles__item">
+                                <a class="footer-articles__link" href="#">
                                     How to create a trade
                                 </a>
                             </li>
-                            <li class="footer__articles-item">
-                                <a class="footer__articles-link" href="#">
+                            <li class="footer-articles__item">
+                                <a class="footer-articles__link" href="#">
                                     Ways of reservation
                                 </a>
                             </li>
-                            <li class="footer__articles-item">
-                                <a class="footer__articles-link" href="#">
+                            <li class="footer-articles__item">
+                                <a class="footer-articles__link" href="#">
                                     Priority of sum payment
                                 </a>
                             </li>
-                            <li class="footer__articles-item">
-                                <a class="footer__articles-link" href="#">
+                            <li class="footer-articles__item">
+                                <a class="footer-articles__link" href="#">
                                     What is Arbitrage
                                 </a>
                             </li>
-                            <li class="footer__articles-item">
-                                <a class="footer__articles-link" href="#">
+                            <li class="footer-articles__item">
+                                <a class="footer-articles__link" href="#">
                                     WS Security
                                 </a>
                             </li>
-                            <li class="footer__articles-item">
-                                <a class="footer__articles-link" href="#">
+                            <li class="footer-articles__item">
+                                <a class="footer-articles__link" href="#">
                                     Statistics
                                 </a>
                             </li>
-                            <li class="footer__articles-item">
-                                <a class="footer__articles-link" href="#">
+                            <li class="footer-articles__item">
+                                <a class="footer-articles__link" href="#">
                                     For Performers
                                 </a>
                             </li>
@@ -392,6 +399,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
