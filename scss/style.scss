@@ -5,37 +5,45 @@
 
 // header start
 .header {
-  background-color: $color-dark-bg;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   min-height: 9rem;
   position: fixed;
   z-index: 9;
-  width: 100%;
+  background-color: $color-dark-bg;
+
   @include breakpoint($mobile-width) {
-    min-height: 5rem;
     flex-wrap: wrap;
+    min-height: 5rem;
   }
 }
+
 .header-logo {
   padding-left: 10rem;
+
   @include breakpoint($tablet-width) {
     min-width: auto;
     padding-left: 4rem;
   }
+
   @include breakpoint($mobile-width) {
-    padding-left: 0;
     margin: 1rem auto;
+    padding-left: 0;
   }
+
   &__link {
-    min-width: 18.7rem;
     display: inline-block;
+    min-width: 18.7rem;
+
     @include breakpoint($tablet-width) {
       min-width: auto;
     }
   }
+
   &__img {
+
     @include breakpoint($mobile-width) {
       height: 3rem;
       line-height: 1;
@@ -45,46 +53,53 @@
 .header-navigation {
   min-height: inherit;
   width: 100%;
+
   @include breakpoint($mobile-width-small) {
     min-height: 3rem;
   }
+
   &__list {
-    list-style: none;
     display: flex;
     justify-content: flex-end;
     min-height: inherit;
+    list-style: none;
   }
+
   &__item {
     display: block;
     max-width: 15rem;
     width: 100%;
+
     @include breakpoint($mobile-width) {
       max-width: 100%;
     }
   }
+
   &__link {
-    font-family: $Dosis-regular;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    font-family: $Dosis-regular;
     text-decoration: none;
     color: $color-white;
     transition: all 0.3s ease-in-out;
+
     &:hover {
-      background-color: rgba(3, 23, 30, 1);
       color: $color-green;
+      background-color: rgba(3, 23, 30, 1);
     }
   }
 }
 // header end
 /* security start */
 .security {
-  background-attachment: fixed;
-  min-height: 93rem;
-  position: relative;
   padding-top: 25.5rem;
   padding-bottom: 15.1rem;
+  min-height: 93rem;
+  position: relative;
+  background-attachment: fixed;
+
   @include breakpoint($mobile-width) {
     min-height: 70rem;
     padding-top: 19.5rem;
@@ -92,85 +107,97 @@
 }
 .security-content {
   &__title {
-    margin: 0;
+    margin: 0 0 2.7rem 0;
     font-family: $Dosis-regular;
     font-size: 2.6rem;
-    font-weight: normal;
     line-height: 4.3rem;
-    margin-bottom: 2.7rem;
+    font-weight: normal;
+
     @include breakpoint($mobile-width) {
       font-size: 1.8rem;
       line-height: 2.7rem;
     }
   }
+
   &__subtitle {
     font-family: $Calibri-regular;
-    color: $color-dark-white;
     font-size: 3.4rem;
     font-weight: 700;
+    color: $color-dark-white;
+
     @include breakpoint($mobile-width) {
       font-size: 2.7rem;
     }
   }
+
   &__btn-trade-wrapper {
     padding-bottom: 2.7rem;
   }
+
   &__btn-trade {
-    background-color: $color-green;
     padding: 1.3rem 7.3rem;
     border-radius: 1rem;
+    background-color: $color-green;
     transition: all 0.3s ease-in-out;
+
     &:hover {
       background-color: $color-dark-green;
     }
   }
+
   &__garant {
+    max-width: 25rem;
     margin: 0;
     line-height: 2.4rem;
     color: $color-dark-white;
-    max-width: 25rem;
   }
+
   &__garant-link {
+    text-decoration: none;
     color: $color-green;
     transition: all 0.3s ease-in-out;
-    text-decoration: none;
+
     &:hover {
-      color: $color-dark-green;
       text-decoration: underline;
+      color: $color-dark-green;
     }
   }
 }
 .security-bottom {
-  position: absolute;
   width: 100%;
+  position: absolute;
   bottom: 0;
   background-color: $color-dark-bg;
+
   &__title {
     margin: 0;
     padding-top: 5.4rem;
     padding-bottom: 5.4rem;
-    text-align: center;
-    font-weight: normal;
     font-family: $Dosis-regular;
     font-size: 3.4rem;
     line-height: 4.3rem;
+    font-weight: normal;
+    text-align: center;
+
     @include breakpoint($mobile-width) {
-      font-size: 2rem;
-      line-height: 2.7rem;
       padding-top: 2.4rem;
       padding-bottom: 2.4rem;
+      font-size: 2rem;
+      line-height: 2.7rem;
     }
   }
 }
 /* security end */
 // scheme start
 .scheme {
-  background-color: $color-gray-bg;
-  padding: 5rem 0;
   min-height: 37rem;
+  padding: 5rem 0;
+  background-color: $color-gray-bg;
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
     @include breakpoint($tablet-width) {
       flex-wrap: wrap;
       justify-content: space-around;
@@ -181,61 +208,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @include breakpoint($tablet-width) {
     flex-basis: 50%;
     margin-bottom: 2rem;
   }
+
   @include breakpoint($mobile-width) {
     flex-basis: 100%;
     margin-bottom: 4rem;
   }
+
   &__img-wrapper {
-    width: 14.9rem;
-    height: 14.9rem;
-    background-color: $color-white;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 14.9rem;
+    height: 14.9rem;
+    border-radius: 50%;
+    background-color: $color-white;
   }
+
   &__content {
-    text-align: center;
     max-width: 17.5rem;
     line-height: 1.7rem;
     font-size: 1.4rem;
+    text-align: center;
+
     @include breakpoint($mobile-width) {
       max-width: 100%;
     }
   }
+
   &__content-number {
+    display: block;
     font-size: 3rem;
     line-height: 4rem;
     color: $color-gray-light;
-    display: block;
     position: relative;
   }
+
   &__content-arrow {
+    max-width: 24.3rem;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     left: 74%;
-    max-width: 24.3rem;
+    transform: translateY(-50%);
+
     @include breakpoint($laptop-width) {
       display: none;
     }
   }
+
   &__content-text {
     margin: 0;
     color: $color-dark-gray;
   }
+
   &__content-link {
-    color: $color-green;
     text-decoration: none;
+    color: $color-green;
     transition: all 0.3s ease-in-out;
+
     &:hover {
-      color: $color-dark-green;
       text-decoration: underline;
+      color: $color-dark-green;
     }
   }
 }
@@ -244,81 +282,93 @@
 .advantages {
   padding-top: 17rem;
   padding-bottom: 5rem;
+
   &__items {
-    color: $color-dark-gray-font;
     max-width: 41rem;
     margin-left: auto;
     margin-right: 2rem;
+    color: $color-dark-gray-font;
   }
+
   &__title {
-    margin: 0;
+    margin: 0 0 2.7rem 0;
     font-family: $Dosis-regular;
     font-size: 3.4rem;
     font-weight: normal;
-    margin-bottom: 2.7rem;
   }
 }
+
 .advantages-item {
   display: flex;
   align-items: center;
   padding-bottom: 3rem;
+
   &__content {
     max-width: 27.6rem;
     margin-left: 2.5rem;
   }
+
   &__title {
-    margin: 0;
+    margin: 0 0 1rem 0;
     color: $color-dark-gray-font;
-    margin-bottom: 1rem;
   }
+
   &__text {
     margin: 0;
-    color: $color-dark-gray;
     font-size: 1.4rem;
     line-height: 1.7rem;
+    color: $color-dark-gray;
   }
-  &__img-wrapper{
-    width: 10.7rem;
-    height: 10.7rem;
-    background-color: $color-white;
-    border-radius: 50%;
+
+  &__img-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 10.7rem;
+    height: 10.7rem;
+    border-radius: 50%;
+    background-color: $color-white;
   }
 }
 // advantages end
 // statistics start
 .statistics {
+  padding: 13.5rem 0 9rem;
   background-color: $color-dark-bg;
   background-blend-mode: darken;
-  padding: 13.5rem 0 9rem;
+
   @include breakpoint($tablet-width) {
     padding-top: 9.5rem;
   }
+
   @include breakpoint($mobile-width) {
     padding-top: 5.5rem;
     padding-bottom: 4.5rem;
   }
+
   &__inner {
     display: flex;
     justify-content: space-around;
     margin-bottom: 10rem;
+
     @include breakpoint($tablet-width) {
       flex-wrap: wrap;
       margin-bottom: 8rem;
     }
+
     @include breakpoint($mobile-width) {
       flex-wrap: wrap;
       margin-bottom: 4rem;
     }
   }
+
   &__title {
     margin: 0;
+    font-family: $Dosis-regular;
     font-weight: normal;
     text-align: center;
-    font-family: $Dosis-regular;
+
     @include breakpoint($mobile-width) {
       font-size: 1.8rem;
     }
@@ -329,31 +379,38 @@
   max-width: 19rem;
   width: 100%;
   text-align: center;
+
   @include breakpoint($tablet-width) {
-    max-width: 100%;
     flex-basis: 50%;
+    max-width: 100%;
     margin-bottom: 4rem;
   }
+
   @include breakpoint($mobile-width) {
     flex-basis: 100%;
   }
+
   &__img-wrapper {
-    height: 8rem;
-    width: 100%;
-    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 8rem;
+    width: 100%;
+    margin-bottom: 2rem;
+
     @include breakpoint($tablet-width) {
       margin-bottom: 0.5rem;
     }
   }
+
   &__info {
     margin-bottom: 1.8rem;
+
     @include breakpoint($tablet-width) {
       margin-bottom: 0;
     }
   }
+
   &__result {
     font-size: 2.6rem;
   }
@@ -363,125 +420,160 @@
 .footer {
   min-height: 36rem;
   padding: 6.7rem 0;
+
   @include breakpoint($mobile-width) {
     padding-top: 3.7rem;
     padding-bottom: 3rem;
   }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     position: relative;
+
     @include breakpoint($tablet-width) {
       flex-wrap: wrap;
       justify-content: space-around;
     }
   }
+
   &__title {
-    margin: 0;
-    font-weight: normal;
+    margin: 0 0 5rem 0;
     font-family: $Dosis-regular;
+    font-weight: normal;
     color: $color-dark-gray-font;
-    margin-bottom: 5rem;
+
     @include breakpoint($mobile-width) {
       margin-bottom: 3rem;
     }
   }
-  &__contacts{
+
+  &__contacts {
+
     @include breakpoint($mobile-width) {
       flex-basis: 100%;
     }
   }
-  &__contacts-list{
+
+  &__contacts-list {
     list-style: none;
   }
-  &__contacts-item{
+
+  &__contacts-item {
     display: block;
     margin-bottom: 3rem;
   }
-  &__contacts-link{
+
+  &__contacts-link {
     display: inline-block;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    color: $color-dark-gray;
-    font-size: 2rem;
     padding-left: 3.4rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $color-dark-gray;
     position: relative;
+    transition: all 0.3s ease-in-out;
+
     &:hover {
       text-decoration: underline;
       color: $color-dark-gray-font;
     }
+
     &::before {
-      position: absolute;
-      left: 0;
+      font-family: "icomoon" !important;
       font-size: 2rem;
       font-weight: 500;
-      font-family: "icomoon" !important;
+      position: absolute;
+      left: 0;
     }
   }
-}
-.footer__contacts-email::before {
-  content: "\f0e0";
-}
-.footer__contacts-phone::before {
-  content: "\f098";
-  font-size: 2.2rem;
-}
-.footer__contacts-skype::before {
-  content: "\f17e";
-  font-size: 2.5rem;
-}
-.footer__contacts-telegram::before {
-  content: "\f2c6";
-  font-size: 2.2rem;
-}
-.footer__contacts-map::before {
-  content: "\f041";
-  left: 1px;
-  font-size: 3rem;
+
+  &__contacts-email {
+    &::before {
+      content: "\f0e0";
+    }
+  }
+
+  &__contacts-phone {
+    &::before {
+      content: "\f098";
+      font-size: 2.2rem;
+    }
+  }
+
+  &__contacts-skype {
+    &::before {
+      content: "\f17e";
+      font-size: 2.5rem;
+    }
+  }
+
+  &__contacts-telegram {
+    &::before {
+      content: "\f2c6";
+      font-size: 2.2rem;
+    }
+  }
+
+  &__contacts-map {
+    &::before {
+      content: "\f041";
+      left: 1px;
+      font-size: 3rem;
+    }
+  }
 }
 
 .footer-articles {
   @include breakpoint($mobile-width) {
     flex-basis: 100%;
   }
+
   &__list {
     list-style: none;
     margin-left: 1.3rem;
   }
+
   &__item {
     display: block;
     margin-bottom: 1.5rem;
   }
+
   &__link {
     font-size: 2rem;
-    color: $color-dark-gray;
     text-decoration: none;
+    color: $color-dark-gray;
     transition: all 0.3s ease-in-out;
+
     &:hover {
-      color: $color-dark-gray-font;
       text-decoration: underline;
+      color: $color-dark-gray-font;
     }
   }
 }
+
 .footer-socials {
   @include breakpoint($tablet-width) {
     flex-basis: 100%;
   }
+
   &__list {
     list-style: none;
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
   }
-  &__list-item{
+
+  &__list-item {
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  &__list-link{
+
+  &__list-link {
     display: inline-block;
     font-size: 0;
   }
 }
+
 .footer-logo {
   position: absolute;
   bottom: 0;
